@@ -9,31 +9,32 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  result = (base * height) / 2;
+  let result = (base * height) / 2;
   return result;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  result = phrase.split(" ");
+  let result = phrase.split(" ");
   return result;
 }
 
 // Desafio 4
 function concatName(nameList) {
-  let lastName = nameList[nameList.length-1];
+  let lastName = nameList[nameList.length - 1];
   let firstName = nameList[0];
   let concat = lastName + ", " + firstName;
   return concat;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsOfWins = wins * 3;
+  let pointsOfTies = ties * 1;
+  let totalPoints = pointsOfWins + pointsOfTies;
+  return totalPoints;
 }
+
 
 // Desafio 6
 function highestCount() {
