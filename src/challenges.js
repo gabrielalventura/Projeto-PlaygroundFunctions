@@ -39,25 +39,30 @@ function footballPoints(wins, ties) {
 function highestCount(numberList) {
   let biggestNumber = numberList[0];
   let repeatNumber = 0;
-  for (index = 0; index < numberList.length; index += 1) {
+  for (let index = 0; index < numberList.length; index += 1) {
     if (biggestNumber < numberList[index]) {
       biggestNumber = numberList[index];
     }
   }
-  for (index = 0; index < numberList.length; index += 1) {
+  for (let index = 0; index < numberList.length; index += 1) {
     if (biggestNumber === numberList[index]) {
       repeatNumber += 1;
     }
   }
   return repeatNumber;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position = cat1-mouse;
+  let cat2Position = cat2-mouse;
+  if (Math.abs(cat1Position) > Math.abs(cat2Position)) {
+    return 'cat2';
+  } else if (Math.abs(cat1Position) < Math.abs(cat2Position)) {
+    return 'cat1'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
