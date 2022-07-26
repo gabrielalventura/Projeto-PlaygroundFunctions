@@ -97,12 +97,12 @@ function encode(phrase1) {
       newPhrase.push("5");
     } else {
       newPhrase.push(phrase1[index]);
-  }
+    }
   }
   return newPhrase.join("");
 }
 function decode(phrase1) {
-  let newPhrase =[];
+  let newPhrase = [];
   for (let index in phrase1) {
     if (phrase1[index] === "1") {
       newPhrase.push("a");
@@ -114,8 +114,8 @@ function decode(phrase1) {
       newPhrase.push("o");
     } else if (phrase1[index] === "5") {
       newPhrase.push("u");
-    }else {
-       newPhrase.push(phrase1[index])
+    } else {
+      newPhrase.push(phrase1[index])
     }
   }
   return newPhrase.join("");
@@ -124,9 +124,14 @@ function decode(phrase1) {
 // Desafio 10
 function techList(techs, name) {
   let result = [];
-  for(let index =0; index < techs.length; index +=1){
-    
+  techs.sort();
+  for (let index in techs) {
+    result.push({ 'tech': techs[index], 'name': name });
   }
+  if (techs.length === 0) {
+    return 'Vazio!'
+  }
+  return result;
 }
 
 module.exports = {
