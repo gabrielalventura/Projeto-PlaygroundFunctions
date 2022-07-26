@@ -68,15 +68,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(listOfNumbers) {
   let answer = [];
-  for (let number of listOfNumbers) {
+  for (number in listOfNumbers) {
     if (listOfNumbers[number] % 3 === 0 && listOfNumbers[number] % 5 === 0) {
       answer.push('fizzBuzz');
-    } else if (listOfNumbers[number] % 3 === 0 && listOfNumbers[number]%5 !== 0) {
+    } else if (listOfNumbers[number] % 3 === 0) {
       answer.push('fizz');
-    } else if (listOfNumbers[number] % 5 === 0 && listOfNumbers[number]%3 !==0) {
+    } else if (listOfNumbers[number] % 5 === 0) {
       answer.push('buzz');
+    } else {
+      answer.push('bug!');
     }
-    answer.push('bug!');
   }
   return answer;
 }
