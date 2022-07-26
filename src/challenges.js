@@ -54,8 +54,8 @@ function highestCount(numberList) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Position = cat1-mouse;
-  let cat2Position = cat2-mouse;
+  let cat1Position = cat1 - mouse;
+  let cat2Position = cat2 - mouse;
   if (Math.abs(cat1Position) > Math.abs(cat2Position)) {
     return 'cat2';
   } else if (Math.abs(cat1Position) < Math.abs(cat2Position)) {
@@ -66,16 +66,58 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listOfNumbers) {
+  let answer = [];
+  for (let number of listOfNumbers) {
+    if (listOfNumbers[number] % 3 === 0 && listOfNumbers[number] % 5 === 0) {
+      answer.push('fizzBuzz');
+    } else if (listOfNumbers[number] % 3 === 0 && listOfNumbers[number]%5 !== 0) {
+      answer.push('fizz');
+    } else if (listOfNumbers[number] % 5 === 0 && listOfNumbers[number]%3 !==0) {
+      answer.push('buzz');
+    }
+    answer.push('bug!');
+  }
+  return answer;
 }
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase1) {
+  let newPhrase = [];
+  for (index in phrase1) {
+    if (phrase1[index] === "a") {
+      newPhrase.push("1");
+    } else if (phrase1[index] === "e") {
+      newPhrase.push("2");
+    } else if (phrase1[index] === "i") {
+      newPhrase.push("3");
+    } else if (phrase1[index] === "o") {
+      newPhrase.push("4");
+    } else if (phrase1[index] === "u") {
+      newPhrase.push("5");
+    } else {
+      newPhrase.push(phrase1[index]);
+  }
+  }
+  return newPhrase.join("");
 }
-function decode() {
-  // seu código aqui
+function decode(phrase1) {
+  let newPhrase =[];
+  for (index in phrase1) {
+    if (phrase1[index] === "1") {
+      newPhrase.push("a");
+    } else if (phrase1[index] === "2") {
+      newPhrase.push("e");
+    } else if (phrase1[index] === "3") {
+      newPhrase.push("i");
+    } else if (phrase1[index] === "4") {
+      newPhrase.push("o");
+    } else if (phrase1[index] === "5") {
+      newPhrase.push("u");
+    } else {
+       newPhrase.push(phrase1[index])
+    }
+  }
+  return newPhrase.join("");
 }
 
 // Desafio 10
