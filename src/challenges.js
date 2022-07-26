@@ -18,14 +18,17 @@ function splitSentence(phrase) {
   result = phrase.split(" ");
   return result;
 }
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nameList) {
+  let lastName = nameList[nameList.length-1];
+  let firstName = nameList[0];
+  let concat = lastName + ", " + firstName;
+  return concat;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
