@@ -21,7 +21,7 @@ function splitSentence(phrase) {
 function concatName(nameList) {
   let lastName = nameList[nameList.length - 1];
   let firstName = nameList[0];
-  let concat = lastName + ", " + firstName;
+  let concat = `${lastName}, ${firstName}`;
   return concat;
 }
 
@@ -56,9 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Position = cat2 - mouse;
   if (Math.abs(cat1Position) > Math.abs(cat2Position)) {
     return 'cat2';
-  } else if(Math.abs(cat1Position) < Math.abs(cat2Position)) {
-    return 'cat1'
-} return 'os gatos trombam e o rato foge'
+  } if (Math.abs(cat1Position) < Math.abs(cat2Position)) {
+    return 'cat1';
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -80,41 +80,41 @@ function fizzBuzz(listOfNumbers) {
 // Desafio 9
 function encode(phrase1) {
   let newPhrase = [];
-  for (index in phrase1) {
-    if (phrase1[index] === "a") {
-      newPhrase.push("1");
-    } else if (phrase1[index] === "e") {
-      newPhrase.push("2");
-    } else if (phrase1[index] === "i") {
-      newPhrase.push("3");
-    } else if (phrase1[index] === "o") {
-      newPhrase.push("4");
-    } else if (phrase1[index] === "u") {
-      newPhrase.push("5");
+  for (let index in phrase1) {
+    if (phrase1[index] === 'a') {
+      newPhrase.push('1');
+    } else if (phrase1[index] === 'e') {
+      newPhrase.push('2');
+    } else if (phrase1[index] === 'i') {
+      newPhrase.push('3');
+    } else if (phrase1[index] === 'o') {
+      newPhrase.push('4');
+    } else if (phrase1[index] === 'u') {
+      newPhrase.push('5');
     } else {
       newPhrase.push(phrase1[index]);
     }
   }
-  return newPhrase.join("");
+  return newPhrase.join('');
 }
 function decode(phrase1) {
   let newPhrase = [];
   for (let index in phrase1) {
-    if (phrase1[index] === "1") {
-      newPhrase.push("a");
-    } else if (phrase1[index] === "2") {
-      newPhrase.push("e");
-    } else if (phrase1[index] === "3") {
-      newPhrase.push("i");
-    } else if (phrase1[index] === "4") {
-      newPhrase.push("o");
-    } else if (phrase1[index] === "5") {
-      newPhrase.push("u");
+    if (phrase1[index] === '1') {
+      newPhrase.push('a');
+    } else if (phrase1[index] === '2') {
+      newPhrase.push('e');
+    } else if (phrase1[index] === '3') {
+      newPhrase.push('i');
+    } else if (phrase1[index] === '4') {
+      newPhrase.push('o');
+    } else if (phrase1[index] === '5') {
+      newPhrase.push('u');
     } else {
-      newPhrase.push(phrase1[index])
+      newPhrase.push(phrase1[index]);
     }
   }
-  return newPhrase.join("");
+  return newPhrase.join('');
 }
 
 // Desafio 10
@@ -122,10 +122,10 @@ function techList(techs, name) {
   let result = [];
   techs.sort();
   for (let index in techs) {
-    result.push({ 'tech': techs[index], 'name': name });
+    result.push({ tech: techs[index], name });
   }
   if (techs.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   return result;
 }

@@ -12,10 +12,10 @@ function generatePhoneNumber(celNumber) {
       if (quantit >= 3 || number < 0 || number > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
-    } 
-    quantit = 0;
     }
-  return ('(' + celNumber[0] + celNumber[1] + ') ' + (celNumber.slice(2, 7)).join('') + '-' + (celNumber.slice(7, 11)).join(''));
+    quantit = 0;
+  }
+  return (`(${celNumber[0]}${celNumber[1]}) ${(celNumber.slice(2, 7)).join('')}-${(celNumber.slice(7, 11)).join('')}`);
 }
 
 // Desafio 12
@@ -36,8 +36,8 @@ function hydrate(drinks) {
     water += Number(quant[index]);
   }
   if (water === 1) {
-    return water + ' copo de água';
-  } return water + ' copos de água';
+    return `${water} copo de água`;
+  } return `${water} copos de água`;
 }
 
 module.exports = {
