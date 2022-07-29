@@ -2,9 +2,7 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
@@ -15,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let result = phrase.split(" ");
+  let result = phrase.split(' ');
   return result;
 }
 
@@ -58,11 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Position = cat2 - mouse;
   if (Math.abs(cat1Position) > Math.abs(cat2Position)) {
     return 'cat2';
-  } else if (Math.abs(cat1Position) < Math.abs(cat2Position)) {
+  } else if(Math.abs(cat1Position) < Math.abs(cat2Position)) {
     return 'cat1'
-  } else {
-    return 'os gatos trombam e o rato foge'
-  }
+} return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
