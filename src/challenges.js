@@ -39,15 +39,13 @@ function highestCount(numberList) {
   let repeatNumber = 0;
   for (let index = 0; index < numberList.length; index += 1) {
     if (biggestNumber < numberList[index]) {
-      biggestNumber = numberList[index];
-    }
+      biggestNumber = numberList[index];}
   }
   for (let index = 0; index < numberList.length; index += 1) {
     if (biggestNumber === numberList[index]) {
       repeatNumber += 1;
     }
-  }
-  return repeatNumber;
+  } return repeatNumber;
 }
 
 // Desafio 7
